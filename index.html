@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Mash - Waitlist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <main class="min-h-screen flex items-center justify-center px-6 py-12">
+        <div class="max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Left Content -->
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-black leading-tight" style="max-width: 650px;">
+                        The All-in-One Platform for the Craft Beer Ecosystem.
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed" style="max-width: 650px;">
+                        Source from local breweries, hire industry talent, and connect with your community—all through a single, integrated platform.
+                    </p>
+                </div>
+
+                <!-- Waitlist Form -->
+                <form id="waitlistForm" class="flex gap-3" style="max-width: 650px;">
+                    <div class="relative flex-1">
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">@</span>
+                        <input
+                            type="email"
+                            id="emailInput"
+                            placeholder="Your Email"
+                            required
+                            class="w-full pl-10 h-12 bg-white border border-gray-200 rounded-lg text-base px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="h-12 px-8 bg-[#001f3f] hover:bg-[#003366] text-white font-semibold rounded-lg transition-colors"
+                    >
+                        Join Waitlist
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Phone Mockup -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-md">
+                    <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/phone%203-t2wItZ3s6k9FvM49aKbpmrex7iFO7U.png"
+                        alt="The Social Mash app on phone"
+                        class="w-full h-auto"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="absolute bottom-6 left-6 text-sm text-gray-500">
+            © 2025 The Social Mash. All rights reserved.
+        </footer>
+    </main>
+
+    <script>
+        const form = document.getElementById('waitlistForm');
+        const emailInput = document.getElementById('emailInput');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+            
+            // Simulate form submission
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Show success state
+            submitBtn.textContent = 'Joined!';
+            emailInput.value = '';
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join Waitlist';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
