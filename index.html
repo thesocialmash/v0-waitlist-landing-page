@@ -12,15 +12,18 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .custom-gap {
+            gap: 0.5rem !important; /* Smaller gap */
+        }
     </style>
 </head>
 <body class="bg-gray-50 overflow-hidden">
-    <main class="h-screen flex items-center justify-center px-6 relative">
-        <div class="max-w-7xl w-full grid lg:grid-cols-2 gap-6 items-center">
+    <main class="h-screen flex items-center justify-center relative">
+        <div class="max-w-7xl w-full flex items-center justify-center pl-32 pr-16" style="gap: 70px">
             <!-- Left Content -->
-            <div class="space-y-8">
+            <div class="w-[42%] space-y-8">
                 <div class="space-y-6">
-                    <h1 class="font-bold text-black leading-tight" style="max-width: 520px; font-size: 3.825rem;">
+                    <h1 class="font-bold text-black leading-tight" style="font-size: 3.825rem;">
                         The All-in-One Platform for the Craft Beer Ecosystem.
                     </h1>
                     <p class="text-gray-600 leading-relaxed" style="max-width: 520px; font-size: 0.9563rem;">
@@ -53,8 +56,8 @@
             </div>
 
             <!-- Right Phone Mockup -->
-            <div class="flex justify-center lg:justify-end">
-                <div class="relative" style="width: 85%; max-width: 340px;">
+            <div class="w-[42%] flex justify-center">
+                <div class="relative" style="width: 100%; max-width: 340px;">
                     <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/phone%203-t2wItZ3s6k9FvM49aKbpmrex7iFO7U.png"
                         alt="The Social Mash app on phone"
@@ -65,8 +68,12 @@
         </div>
 
         <!-- Footer -->
-        <footer class="absolute bottom-6 left-12 text-sm text-gray-500">
-            © 2025 The Social Mash. All rights reserved.
+        <footer class="absolute bottom-4 left-0 w-full text-sm text-gray-500">
+            <div class="max-w-7xl w-full flex items-center justify-start pl-36 pr-16">
+                <div class="w-[42%]" style="margin-left: 32px;">
+                    © 2025 The Social Mash. All rights reserved.
+                </div>
+            </div>
         </footer>
     </main>
 
@@ -89,7 +96,7 @@
             submitBtn.textContent = 'Joined!';
             emailInput.value = '';
             
-            // Reset after 3 seconds
+            // Reset after 3 secondss
             setTimeout(() => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Join Waitlist';
