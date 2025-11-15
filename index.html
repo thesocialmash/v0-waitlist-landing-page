@@ -21,6 +21,39 @@
         .error {
             background-color: #dc2626 !important;
         }
+        @media (max-width: 768px) {
+            main .flex {
+                flex-direction: column;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .w-\[42\%\] {
+                width: 100% !important;
+            }
+            .pl-32, .pl-36 {
+                padding-left: 1rem !important;
+            }
+            .pr-16 {
+                padding-right: 1rem !important;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            form {
+                flex-direction: column;
+            }
+            footer div {
+                width: 100% !important;
+                margin-left: 0 !important;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 overflow-hidden">
