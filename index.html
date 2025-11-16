@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,68 +13,36 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .custom-gap {
-            gap: 0.5rem !important;
-        }
         .success {
             background-color: #059669 !important;
         }
         .error {
             background-color: #dc2626 !important;
         }
-        @media (max-width: 768px) {
-            main .flex {
-                flex-direction: column;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            .w-\[42\%\] {
-                width: 100% !important;
-            }
-            .pl-32, .pl-36 {
-                padding-left: 1rem !important;
-            }
-            .pr-16 {
-                padding-right: 1rem !important;
-            }
-            h1 {
-                font-size: 2.5rem !important;
-                text-align: center;
-            }
-            p {
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            form {
-                flex-direction: column;
-            }
-            footer div {
-                width: 100% !important;
-                margin-left: 0 !important;
-                text-align: center;
-            }
-        }
     </style>
 </head>
-<body class="bg-gray-50 overflow-hidden">
-    <main class="h-screen flex items-center justify-center relative">
-        <div class="max-w-7xl w-full flex items-center justify-center pl-32 pr-16" style="gap: 70px">
+<body class="bg-gray-50">
+    <main class="min-h-screen flex items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-center lg:pl-16 lg:pr-8 gap-8 lg:gap-16">
             <!-- Left Content -->
-            <div class="w-[42%] space-y-8">
-                <div class="space-y-6">
-                    <h1 class="font-bold text-black leading-tight" style="font-size: 3.825rem;">
+            <div class="w-full lg:w-[42%] space-y-6 lg:space-y-8 px-4 lg:px-0">
+                <div class="space-y-4 lg:space-y-6 text-center lg:text-left">
+                    <h1 class="font-bold text-black leading-tight text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
                         The All-in-One Platform for the Craft Beer Ecosystem.
                     </h1>
-                    <p class="text-gray-600 leading-relaxed" style="max-width: 520px; font-size: 0.9563rem;">
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0">
                         Source from local breweries, hire industry talent, and connect with your community—all through a single, integrated platform.
                     </p>
                 </div>
 
                 <!-- Waitlist Form -->
-                <form id="waitlistForm" class="flex gap-3" style="max-width: 520px;" 
-                      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQ0NEwPrw8glLHIS-sT7CAqyQb0GcxKBKRvt3P44YcxHo09w/formResponse" 
-                      method="POST" target="hiddenFrame">
+                <form 
+                    id="waitlistForm" 
+                    class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto lg:mx-0"
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQ0NEwPrw8glLHIS-sT7CAqyQb0GcxKBKRvt3P44YcxHo09w/formResponse"
+                    method="POST"
+                    target="hiddenFrame"
+                >
                     <div class="relative flex-1">
                         <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">@</span>
                         <input
@@ -82,24 +51,29 @@
                             name="entry.1707550040"
                             placeholder="Your Email"
                             required
-                            class="w-full pl-10 bg-white border border-gray-200 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            style="height: 2.55rem; font-size: 0.85rem;"
+                            class="w-full pl-10 bg-white border border-gray-200 rounded-lg px-4 py-3 sm:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                         />
                     </div>
                     <button
                         type="submit"
                         id="submitBtn"
-                        class="bg-[#001f3f] hover:bg-[#003366] text-white font-semibold rounded-lg transition-colors whitespace-nowrap"
-                        style="height: 2.55rem; padding-left: 1.7rem; padding-right: 1.7rem; font-size: 0.85rem;"
+                        class="bg-[#001f3f] hover:bg-[#003366] text-white font-semibold rounded-lg transition-colors whitespace-nowrap px-6 py-3 sm:py-2 text-sm sm:text-base"
                     >
                         Join Waitlist
                     </button>
                 </form>
+
+                <!-- Footer moved here for better mobile positioning -->
+                <div class="text-center lg:text-left mt-8 lg:mt-0">
+                    <p class="text-sm text-gray-500">
+                        © 2025 The Social Mash. All rights reserved.
+                    </p>
+                </div>
             </div>
 
             <!-- Right Phone Mockup -->
-            <div class="w-[42%] flex justify-center">
-                <div class="relative" style="width: 100%; max-width: 340px;">
+            <div class="w-full lg:w-[42%] flex justify-center mt-8 lg:mt-0 px-4 lg:px-0">
+                <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-md">
                     <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/phone%203-t2wItZ3s6k9FvM49aKbpmrex7iFO7U.png"
                         alt="The Social Mash app on phone"
@@ -109,18 +83,9 @@
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="absolute bottom-4 left-0 w-full text-sm text-gray-500">
-            <div class="max-w-7xl w-full flex items-center justify-start pl-36 pr-16">
-                <div class="w-[42%]" style="margin-left: 32px;">
-                    © 2025 The Social Mash. All rights reserved.
-                </div>
-            </div>
-        </footer>
+        <!-- Hidden iframe for form submission -->
+        <iframe name="hiddenFrame" class="hidden"></iframe>
     </main>
-
-    <!-- Hidden iframe for form submission -->
-    <iframe name="hiddenFrame" style="display: none;"></iframe>
 
     <script>
         const form = document.getElementById('waitlistForm');
@@ -138,23 +103,41 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Joining...';
             
-            // Submit the form to Google Forms
-            form.submit();
-            
-            // Show success state (form submits in background)
-            submitBtn.textContent = 'Joined!';
-            submitBtn.classList.remove('bg-[#001f3f]', 'hover:bg-[#003366]');
-            submitBtn.classList.add('success');
-            emailInput.value = '';
-            
-            // Reset after 3 seconds
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Join Waitlist';
-                submitBtn.classList.remove('success');
-                submitBtn.classList.add('bg-[#001f3f]', 'hover:bg-[#003366]');
-            }, 3000);
+            try {
+                // Submit the form to Google Forms
+                form.submit();
+                
+                // Show success state (form submits in background)
+                submitBtn.textContent = 'Joined!';
+                submitBtn.classList.remove('bg-[#001f3f]', 'hover:bg-[#003366]');
+                submitBtn.classList.add('success');
+                emailInput.value = '';
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join Waitlist';
+                    submitBtn.classList.remove('success');
+                    submitBtn.classList.add('bg-[#001f3f]', 'hover:bg-[#003366]');
+                }, 3000);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                // Show error state
+                submitBtn.textContent = 'Error, try again';
+                submitBtn.classList.remove('bg-[#001f3f]', 'hover:bg-[#003366]');
+                submitBtn.classList.add('error');
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join Waitlist';
+                    submitBtn.classList.remove('error');
+                    submitBtn.classList.add('bg-[#001f3f]', 'hover:bg-[#003366]');
+                }, 3000);
+            }
         });
     </script>
 </body>
 </html>
+```
